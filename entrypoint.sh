@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pip install -r /code/requirements.txt
+pip install -r /code/ADL_LRS/requirements.txt
 
 service nginx restart
 
