@@ -1,0 +1,35 @@
+version: '2'
+services:
+  lrs:
+      image: noampolak/adl_lrs
+      ports:
+          - "8080:8080"
+      networks:
+        - back-tier
+        - front-tier
+
+  postgres:
+    image: postgres:alpine
+    container_name: postgres-lrs
+    environment:
+      POSTGRES_PASSWORD: lrs2021!
+      POSTGRES_USER: postgres
+      POSTGRES_DB: lrs
+    ports:
+      - "8432:5432"
+    networks:
+      - back-tier
+  rabbitmq:
+      image: rabbitmq:3.8
+      privileged: true
+      container_name: rabbit-lrs
+      ports:
+        - "15672:15672"
+      networks:
+        - back-tier
+        - front-tier
+networks:
+  front-tier:
+    driver: bridge
+  back-tier:
+    driver: bridge
