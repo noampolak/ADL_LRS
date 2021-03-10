@@ -6,7 +6,7 @@ RUN pip install 'fabric<2.0'
 
 RUN mkdir /code; cd /code; git clone  https://github.com/noampolak/ADL_LRS.git
 
-RUN /bin/bash -c "cd /code/ADL_LRS; fab setup_env"
+# RUN /bin/bash -c "cd /code/ADL_LRS; fab setup_env"
 
 
 # COPY libpop.deb rsync.deb nginx-common.deb nginx-full.deb init-system-helpers.deb /workspace/

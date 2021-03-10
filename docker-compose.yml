@@ -2,6 +2,7 @@ version: '2'
 services:
   lrs:
       image: noampolak/adl_lrs
+      container_name: web-lrs
       ports:
           - "8080:8080"
       networks:
