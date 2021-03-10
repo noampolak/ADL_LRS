@@ -7,7 +7,7 @@ django-jsonify==0.3.0
 importlib==1.0.3
 isodate==0.5.4
 oauth2==1.9.0.post1
-psycopg2==2.6.1
+psycopg2==2.7
 pycryptodome==3.6.6
 pyinotify==0.9.6
 python-jose==0.6.1

@@ -4,7 +4,7 @@ RUN apt-get update; apt-get install -y git nginx
 
 RUN pip install 'fabric<2.0'
 
-RUN mkdir /code; cd /code; git clone https://github.com/noampolak/ADL_LRS.git
+RUN mkdir /code; cd /code; git clone  https://github.com/noampolak/ADL_LRS.git
 
 RUN /bin/bash -c "cd /code/ADL_LRS; fab setup_env"
 
@@ -18,9 +18,7 @@ RUN /bin/bash -c "cd /code/ADL_LRS; fab setup_env"
 
 # RUN mkdir -p /etc/uwsgi/vassals; mkdir /workspace/ADL_LRS/logs
 # COPY lrs_uwsgi.ini /etc/uwsgi/vassals/lrs_uwsgi.ini
-RUN ls
-RUN cd code && ls
-RUN cd code/ADL_LRS && ls
+
 RUN cp /code/ADL_LRS/entrypoint.sh / && chmod +x entrypoint.sh
 EXPOSE 8080
 CMD ["/entrypoint.sh"]
