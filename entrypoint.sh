@@ -9,13 +9,9 @@ case $1 in
 pause)
     sleep 24h
     ;;
-statics)
-    shift
-    echo "Rsync statics From:  /code/skillzdjango/skillz/statics To: /statics.."
-    rsync -avz --update --delete /code/skillzdjango/skillz/statics /
-   ;;
 manage)
     shift
+    echo "Running python manage.py $@ .."
     cd /code/ADL_LRS && python manage.py "$@"
     ;;
 gunicorn)

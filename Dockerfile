@@ -21,4 +21,5 @@ RUN cp code/ADL_LRS/settings.py  code/ADL_LRS/adl_lrs/settings.py
 
 RUN cp /code/ADL_LRS/entrypoint.sh / && chmod +x entrypoint.sh
 EXPOSE 8080
-CMD ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["pause"]

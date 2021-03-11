@@ -1,11 +1,11 @@
-version: '2'
+version: '3'
 services:
   lrs:
       image: noampolak/adl_lrs
       container_name: web-lrs
-      command: manage runserver 0.0.0.0:8080
+      command: manage runserver 0.0.0.0:80
       ports:
-          - "8080:8080"
+          - "8080:80"
       networks:
         - back-tier
         - front-tier
