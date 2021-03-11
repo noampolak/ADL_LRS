@@ -8,7 +8,7 @@ RUN mkdir /code; cd /code; git clone  https://github.com/noampolak/ADL_LRS.git
 
 # RUN /bin/bash -c "cd /code/ADL_LRS; fab setup_env"
 
-
+RUN cp code/ADL_LRS/settings.py  code/ADL_LRS/adl_lrs/settings.py 
 # COPY libpop.deb rsync.deb nginx-common.deb nginx-full.deb init-system-helpers.deb /workspace/
 
 # RUN dpkg -i /workspace/*.deb

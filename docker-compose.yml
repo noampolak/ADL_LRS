@@ -24,6 +24,10 @@ services:
       image: rabbitmq:3.8
       privileged: true
       container_name: rabbit-lrs
+      environment:
+        RABBITMQ_DEFAULT_USER: user-lrs
+        RABBITMQ_DEFAULT_PASS: lrs-password
+        RABBITMQ_DEFAULT_VHOST: lrs-vhost
       ports:
         - "15672:15672"
       networks:
