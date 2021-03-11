@@ -3,6 +3,7 @@ services:
   lrs:
       image: noampolak/adl_lrs
       container_name: web-lrs
+      command: manage runserver 0.0.0.0:8080
       ports:
           - "8080:8080"
       networks:
