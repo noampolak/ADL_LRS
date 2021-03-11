@@ -14,8 +14,8 @@ services:
     image: postgres:alpine
     container_name: postgres-lrs
     environment:
-      POSTGRES_PASSWORD: lrs2021!
-      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: lrs
+      POSTGRES_USER: lrs
       POSTGRES_DB: lrs
     ports:
       - "8432:5432"
