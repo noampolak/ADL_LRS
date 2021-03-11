@@ -3,6 +3,13 @@ import sys
 from fabric.api import local
 
 
+def setup_env():
+    INSTALL_STEPS = [
+        'virtualenv ../env;. ../env/bin/activate;pip install -r requirements.txt;deactivate']
+    for step in INSTALL_STEPS:
+        local(step)
+
+
 def setup_lrs():
     # Media folder names
     agent_profile = 'agent_profile'
@@ -31,6 +38,10 @@ def setup_lrs():
     supervisord_log_dir = os.path.join(log_dir, 'supervisord')
     if not os.path.exists(supervisord_log_dir):
         os.makedirs(supervisord_log_dir)
+
+    uwsgi_log_dir = os.path.join(log_dir, 'uwsgi')
+    if not os.path.exists(uwsgi_log_dir):
+        os.makedirs(uwsgi_log_dir)
 
     nginx_log_dir = os.path.join(log_dir, 'nginx')
     if not os.path.exists(nginx_log_dir):
