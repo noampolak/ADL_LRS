@@ -16,7 +16,7 @@ statics)
    ;;
 manage)
     shift
-    cd /code/ADL_LRS/adl_lrs && python manage.py "$@"
+    cd /code/ADL_LRS && python manage.py "$@"
     ;;
 gunicorn)
 	 cd /code/ADL_LRS && gunicorn --bind 0.0.0.0:8080  --workers=9 adl_lrs.wsgi:application --log-level=debug -c /code/ADL_LRS/docker-gunicorn.conf.py
