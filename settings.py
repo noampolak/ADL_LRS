@@ -132,7 +132,7 @@ OAUTH_SCOPES = (
 AMPQ_USERNAME = 'user-lrs'
 AMPQ_PASSWORD = 'lrs-password'
 AMPQ_HOST = 'rabbit-lrs'
-AMPQ_PORT ='15672'
+AMPQ_PORT ='5672'
 AMPQ_VHOST = 'lrs_vhost'
 
 CELERY_ACCEPT_CONTENT = ['json']

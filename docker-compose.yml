@@ -22,7 +22,7 @@ services:
     networks:
       - back-tier
   rabbitmq:
-      image: rabbitmq:3.8
+      image: rabbitmq:3-management
       privileged: true
       container_name: rabbit-lrs
       environment:
