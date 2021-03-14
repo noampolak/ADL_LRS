@@ -1,6 +1,6 @@
 ﻿# ADL LRS test env - for Skillz vendors 
-
-#### Installation tested on <b>Ubuntu 14.04</b> machine with Python 2.7.18, <b>Ubuntu 14.04+</b> is recommended. Updated to be compliant with the 1.0.3 xAPI spec.
+Forked from the ADL_LRS project: https://github.com/adlnet/ADL_LRS, and wrapped with Docker-compose with RabbitMQ and PostgresDB
+Just download - "docker-compose up" and you are good to go 
 
 This version is stable, but only intended to support a small amount of users as a proof of concept. While it uses programming best practices, it is not designed to take the place of an enterprise system.
 
@@ -21,8 +21,6 @@ Can be changed in the docker-compose.yml
 * [OAuth Help](https://github.com/adlnet/ADL_LRS/wiki/Using-OAuth)
 * [Clearing the Database](https://github.com/adlnet/ADL_LRS/wiki/Clearing-the-Database)
 
-## Contributing to the project
-We welcome contributions to this project. Fork this repository, make changes, and submit pull requests. If you're not comfortable with editing the code, please [submit an issue](https://github.com/adlnet/ADL_LRS/issues) and we'll be happy to address it.
 
 ## License
    Copyright &copy;2016 Advanced Distributed Learning
