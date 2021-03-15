@@ -11,7 +11,7 @@ PROJECT_ROOT = dirname(dirname(SETTINGS_DIR))
 
 
 # If you want to debug
-DEBUG = 'DEBUG'
+DEBUG = True
 
 
 
@@ -193,7 +193,7 @@ TEMPLATES = [
     },
 ]
 
-USE_ETAGS = False
+USE_ETAGS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = (
